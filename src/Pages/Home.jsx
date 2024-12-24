@@ -67,19 +67,21 @@ function Home() {
         <Buttoncall>learn more </Buttoncall>
       </div>
 
-      <div className="w-4/5 my-3 mx-auto">
+      <div className="w-4/5 my-5 mx-auto">
         <h2 className="text-xl capitalise text-center ">
           clubs and extra curricular
         </h2>
-        <div className=" bg-orange-500 mx-auto md:grid grid-cols-3 gap-4">
+        <div className="hidden md:grid grid-cols-4 gap-3  bg-orange-500 w-full min-h-[35vh] mx-auto p-2 ">
           {clubs.map((item, index) => (
-            <div key={index} className="relative p-2">
-              <img
-                src={item.photo}
-                alt=""
-                className="my-3 rounded-lg absolute top-0 bottom-0 w-full "
-              />
-              <div className="absolute bottom-0 right-[40%]  text-white text-2xl uppercase bg-[rgba(0,0,0,0.75)]">
+            <div key={index} className=" bg-red-950 p-4 relative ">
+              <div className=" bg-amber-400 absolute top-0 bottom-0 left-0">
+                <img
+                  src={item.photo}
+                  alt=""
+                  className="max-w-full max-h-full cover"
+                />
+              </div>
+              <div className=" w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0">
                 <h3>{item.name}</h3>
               </div>
             </div>
