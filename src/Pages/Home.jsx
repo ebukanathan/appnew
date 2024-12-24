@@ -81,7 +81,7 @@ function Home() {
                   className="max-w-full max-h-full cover"
                 />
               </div>
-              <div className=" w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0">
+              <div className=" w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
                 <h3>{item.name}</h3>
               </div>
             </div>
