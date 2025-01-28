@@ -23,7 +23,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Brand Center
+                    Events
                   </a>
                 </li>
                 <li className="mb-4">
@@ -40,17 +40,17 @@ function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Discord Server
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Twitter
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
                     Facebook
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="#" className="hover:underline">
+                    Youtube
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="#" className="hover:underline">
+                    Instagram
                   </a>
                 </li>
                 <li className="mb-4">
@@ -90,22 +90,22 @@ function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    iOS
+                    ccccc
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Android
+                    cccc
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Windows
+                    cccc
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    MacOS
+                    cccc
                   </a>
                 </li>
               </ul>
