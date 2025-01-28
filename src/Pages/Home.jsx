@@ -71,10 +71,10 @@ function Home() {
         <h2 className="text-xl capitalise text-center ">
           clubs and extra curricular
         </h2>
-        <div className="hidden md:grid grid-cols-4 gap-3  bg-orange-500 w-full min-h-[35vh] mx-auto p-2 ">
+        <div className="hidden md:grid grid-cols-4 gap-3  w-full  mx-auto p-2 ">
           {clubs.map((item, index) => (
-            <div key={index} className=" bg-red-950 p-4 relative ">
-              <div className=" bg-amber-400 absolute top-0 bottom-0 left-0">
+            <div key={index} className="bg-red-500  relative ">
+              <div className=" w-full aspect-square">
                 <img
                   src={item.photo}
                   alt=""
