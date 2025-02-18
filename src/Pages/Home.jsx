@@ -106,7 +106,7 @@ function Home() {
       <div className="w-4/5 mx-auto md:hidden">
         <Swiper
           spaceBetween={10}
-          slidesPerView={2.3}
+          slidesPerView={1.5}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
@@ -134,7 +134,7 @@ function Home() {
                   className="max-w-full max-h-full cover"
                 />
               </div>
-              <div className="w-full p-1 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
+              <div className="w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
                 <h3 className="capitalize">{item.name}</h3>
               </div>
             </SwiperSlide>
