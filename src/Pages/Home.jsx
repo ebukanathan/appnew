@@ -1,15 +1,28 @@
 import React from "react";
 import Buttoncall from "../components/Buttoncall";
+import TwoColContainer from "../components/TwoColContainer";
 import chess from "../assets/chess.jpg";
 import robotics from "../assets/robotics.jpg";
 import takwendo from "../assets/takwendo.jpg";
+import ballet from "../assets/ballet.jpg";
+// import music from "../assets/music.jpg";
+import sen from "../assets/sen.jpg";
+import highfront from "../assets/highfront.jpg";
+import highearly from "../assets/highearly.jpg";
+import highgrade from "../assets/highgrade.jpg";
 
 function Home() {
-  const sections = ["early years", "primary", "Junior High"];
+  const sections = [
+    { name: "early years", image: highearly, color: "green" },
+    { name: "primary", image: highgrade, color: "purple" },
+    { name: "Junior High", image: highfront, color: "orange" },
+  ];
   const clubs = [
     { name: "chess", photo: chess },
     { name: "robotics", photo: robotics },
     { name: "takwendo", photo: takwendo },
+    { name: "ballet", photo: ballet },
+    // { name: "music", photo: music },
   ];
   return (
     <>
@@ -17,18 +30,14 @@ function Home() {
         {sections.map((item, index) => (
           <div
             key={index}
-            className="rounded-lg border-none text-xl p-10 bg-yellow-500 my-2 text-center hover:opacity-75"
+            className="rounded-lg border-none text-xl   my-2 text-center hover:opacity-75"
+            style={{ backgroundColor: item.color }}
           >
-            <img src="" alt="" />
-            {item}
+            {/* <div className="bg-red-400  w-full">ghhh</div> */}
+            <img src={item.image} alt="" className="rounded-sm" />
+            <div className="p-3 capti">{item.name}</div>
           </div>
         ))}
-        {/* <div className="rounded-lg border-none text-xl p-10 bg-yellow-500 my-2 text-center">
-        Primary School
-      </div>
-      <div className="rounded-lg border-none text-xl p-10 bg-yellow-500 my-2 text-center">
-        Junior High School
-      </div> */}
       </div>
 
       {/* Aboutus */}
@@ -66,7 +75,7 @@ function Home() {
 
         <Buttoncall>learn more </Buttoncall>
       </div>
-
+      {/* CLUBS AND EXTRACURRICULAR */}
       <div className="w-4/5 my-5 mx-auto">
         <h2 className="text-xl capitalise text-center ">
           clubs and extra curricular
@@ -88,6 +97,29 @@ function Home() {
           ))}
         </div>
       </div>
+
+      <TwoColContainer>
+        {/* photo */}
+        <div className="">
+          <img src={sen} alt="special needs" className="w-full rounded-lg" />
+        </div>
+        {/* write up */}
+        <div className="w-full">
+          <h2 className="text-xl font-extrabold mb-3">
+            Empowering Every Child to Succeed – Welcome to Our Special
+            Educational Needs (SEN) Center!
+          </h2>
+          <p className="text-sm">
+            At Apearl Premier Private School, we believe that every child
+            deserves the opportunity to learn, grow, and thrive in a supportive
+            and inclusive environment. Our Special Educational Needs (SEN)
+            Center is dedicated to providing tailored support to students with
+            diverse learning needs, ensuring they reach their full potential
+            academically, socially, and emotionally.
+          </p>
+          <Buttoncall>learn more</Buttoncall>
+        </div>
+      </TwoColContainer>
     </>
   );
 }
