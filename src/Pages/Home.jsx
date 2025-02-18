@@ -103,7 +103,7 @@ function Home() {
       </div>
 
       {/* mobile */}
-      <div className="w-4/5 mx-auto md:hidden">
+      <div className="w-full p-1 mx-auto md:hidden">
         <Swiper
           spaceBetween={10}
           slidesPerView={1.5}
@@ -131,7 +131,7 @@ function Home() {
                 <img
                   src={item.photo}
                   alt=""
-                  className="max-w-full max-h-full cover"
+                  className="max-w-full max-h-full cover rounded-lg"
                 />
               </div>
               <div className="w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
