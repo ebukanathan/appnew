@@ -1,6 +1,8 @@
 import React from "react";
 import Buttoncall from "../components/Buttoncall";
 import TwoColContainer from "../components/TwoColContainer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import chess from "../assets/chess.jpg";
 import robotics from "../assets/robotics.jpg";
 import takwendo from "../assets/takwendo.jpg";
@@ -76,6 +78,8 @@ function Home() {
         <Buttoncall>learn more </Buttoncall>
       </div>
       {/* CLUBS AND EXTRACURRICULAR */}
+
+      {/* desktop */}
       <div className="w-4/5 my-5 mx-auto">
         <h2 className="text-xl capitalise text-center ">
           clubs and extra curricular
@@ -96,6 +100,49 @@ function Home() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* mobile */}
+      <div className="w-4/5 mx-auto md:hidden">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={2.7}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {/* <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          ... */}
+
+          {clubs.map((item, index) => (
+            // <div key={index} className="bg-red-500  relative ">
+            //   <div className=" w-full aspect-square">
+            //     <img
+            //       src={item.photo}
+            //       alt=""
+            //       className="max-w-full max-h-full cover"
+            //     />
+            //   </div>
+            //   <div className=" w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
+            //     <h3>{item.name}</h3>
+            //   </div>
+            // </div>
+            <SwiperSlide key={index} className="relative">
+              <div className="w-full aspect-auto">
+                <img
+                  src={item.photo}
+                  alt=""
+                  className="max-w-full max-h-full cover"
+                />
+                <div className="w-full p-1 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
+                  <h3 className="capitalize">{item.name}</h3>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <TwoColContainer>
