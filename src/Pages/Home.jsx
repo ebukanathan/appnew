@@ -12,6 +12,7 @@ import sen from "../assets/sen.jpg";
 import highfront from "../assets/highfront.jpg";
 import highearly from "../assets/highearly.jpg";
 import highgrade from "../assets/highgrade.jpg";
+import NewsandEvents from "../components/NewsandEvents";
 
 function Home() {
   const sections = [
@@ -164,6 +165,8 @@ function Home() {
           <Buttoncall>learn more</Buttoncall>
         </div>
       </TwoColContainer>
+
+      <NewsandEvents />
     </>
   );
 }

@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="opacity-75 z-50 w-screen bg-gradient-to-r from-purple-50 to-blue-900 flex justify-between items-center px-6 h-14 text-gray-50">
+      <div className=" sticky top-0 opacity-75 z-50 w-screen bg-gradient-to-r from-purple-50 to-blue-900 flex justify-between items-center px-6 h-14 text-gray-50">
         <a className="w-[80px] p-4">
           <img src={Logo} alt="" className="w-auto" />
         </a>
