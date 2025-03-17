@@ -11,7 +11,7 @@ function Hero() {
       </div> */
   }
   return (
-    <div className=" w-[100%] min-h-[50vh] relative overflow-hidden  z-100 bg-[rgba(0,0,0,0.6)] flex justify-start items-center  md:h-[80vh]">
+    <div className=" w-[100%] min-h-[50vh] relative overflow-hidden  z-100 bg-[rgba(0,0,0,0.5)] flex justify-start items-center  md:h-[80vh]">
       <div className="z-10 text-white text-3xl w-1/2 capitalize max-w-[960px] ml-6 md:text-5xl">
         Welcome to apearl premier private school{" "}
         <span>

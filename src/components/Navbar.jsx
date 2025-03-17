@@ -5,7 +5,7 @@ import { FaBars, FaMinus } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 function Navbar() {
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
   const [showSub, setShowSub] = useState(true);
 
   const menu = [
@@ -41,7 +41,10 @@ function Navbar() {
           {menu.map((menu, index) => (
             <div
               key={index}
-              className="flex items-center justify-center capitalize "
+              className="flex items-center justify-center capitalize relative "
+              onClick={() => setShowNav(!showNav)}
+              onMouseEnter={() => setShowNav(!showNav)}
+              onMouseLeave={() => setShowNav(!showNav)}
             >
               {menu.name}
               {menu.submenu.length > 1 ? (
@@ -51,6 +54,16 @@ function Navbar() {
                 />
               ) : (
                 ""
+              )}
+
+              {showNav && menu.submenu.length > 0 && (
+                <div className="w-[150px] absolute top-8 bg-slate-600 text-red-600 px-2 py-3">
+                  {menu.submenu.map((item, index) => (
+                    <div key={index} className="">
+                      {item}
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
           ))}
