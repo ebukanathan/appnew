@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <TryNav />
+
       <Hero />
       <Home />
 

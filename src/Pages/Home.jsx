@@ -14,7 +14,7 @@ import highearly from "../assets/highearly.jpg";
 import highgrade from "../assets/highgrade.jpg";
 import NewsandEvents from "../components/NewsandEvents";
 import Managers from "../components/Managers";
-
+import { TbTargetArrow, TbBinoculars } from "react-icons/tb";
 function Home() {
   const sections = [
     { name: "early years", image: highearly, color: "green" },
@@ -30,7 +30,7 @@ function Home() {
   ];
   return (
     <>
-      <div className=" w-4/5 mx-auto md:grid grid-cols-3  gap-3 my-6">
+      <div className="  mt-0  w-full mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
         {sections.map((item, index) => (
           <div
             key={index}
@@ -39,7 +39,7 @@ function Home() {
           >
             {/* <div className="bg-red-400  w-full">ghhh</div> */}
             <img src={item.image} alt="" className="rounded-sm" />
-            <div className="p-3 capti">{item.name}</div>
+            <div className="p-3 capitalize hover:text-white">{item.name}</div>
           </div>
         ))}
       </div>
@@ -59,7 +59,11 @@ function Home() {
           toyed with.
         </p>
         <div className="w-full mt-6 mx-auto  md:flex  gap-4">
-          <div className="  w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
+          <div className="  relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
+            <TbBinoculars
+              size={100}
+              className="absolute top-[25%] left-[35%] opacity-10 "
+            />
             <h3 className="text-center text-xl capitalize p-0">Our vision</h3>
             <p className="p-0">
               {" "}
@@ -67,10 +71,13 @@ function Home() {
               friendly environment
             </p>
           </div>
-          <div className="w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
+          <div className="relative justify-center items-center w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
+            <TbTargetArrow
+              size={100}
+              className="absolute top-[25%] left-[35%] opacity-10 "
+            />
             <h3 className="text-center text-xl capitalize p-0">Our Mission</h3>
             <p className="p-0">
-              {" "}
               To Nurture children to the best they can be in an enabling and
               friendly environment
             </p>
@@ -150,7 +157,7 @@ function Home() {
           <img src={sen} alt="special needs" className="w-full rounded-lg" />
         </div>
         {/* write up */}
-        <div className="w-full">
+        <div className="w-full pt-5">
           <h2 className="text-xl font-extrabold mb-3">
             Empowering Every Child to Succeed – Welcome to Our Special
             Educational Needs (SEN) Center!
