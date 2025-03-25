@@ -1,21 +1,35 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import gladys from "../assets/Gladys.jpeg";
+import { Navigation } from "swiper/modules";\
+import 'swiper/css/navigation';
+import gladys from "../assets/Gladys.jpg";
 import director from "../assets/director.jpg";
-import atiga from "../assets/Atiga.jpeg";
+import atiga from "../assets/Atiga.jpg";
+import promise from "../assets/promise.jpg";
+import ngele from "../assets/ngele.jpg";
+
 import consultant from "../assets/consultant.jpg";
 
 function Managers() {
   const managers = [
     { name: "Oluchi Okoro", image: director, title: "Direcctor", desc: "" },
+    { name: "Livinus Ngele", image: ngele, title: "Principal", desc: "" },
     { name: "Atiga Samuel", image: atiga, title: "Head teacher", desc: "" },
-    { name: "Ebere Okafor", image: consultant, title: "Consultant", desc: "" },
+
     {
       name: "Gladys Olasanonye",
       image: gladys,
       title: "Administrator",
       desc: "",
     },
+    {
+      name: "Promise Nwagbaoso",
+      image: promise,
+      title: "EYFS Coordinator",
+      desc: "",
+    },
+
+    { name: "Ebere Okafor", image: consultant, title: "Consultant", desc: "" },
   ];
   return (
     <>
@@ -25,9 +39,11 @@ function Managers() {
       <div className=" hidden md:block w-2/3 p-1 mx-auto  ">
         <Swiper
           spaceBetween={10}
+          Navigation
           slidesPerView={3}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          arrow={true}
         >
           {managers.map((item, index) => (
             <SwiperSlide

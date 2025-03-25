@@ -120,18 +120,6 @@ function Home() {
           onSwiper={(swiper) => console.log(swiper)}
         >
           {clubs.map((item, index) => (
-            // <div key={index} className="bg-red-500  relative ">
-            //   <div className=" w-full aspect-square">
-            //     <img
-            //       src={item.photo}
-            //       alt=""
-            //       className="max-w-full max-h-full cover"
-            //     />
-            //   </div>
-            //   <div className=" w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75">
-            //     <h3>{item.name}</h3>
-            //   </div>
-            // </div>
             <SwiperSlide
               key={index}
               className="relative w-1/2 bg-red-500 rounded-lg"

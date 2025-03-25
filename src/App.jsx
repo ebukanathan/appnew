@@ -15,6 +15,9 @@ function App() {
 
       <Hero />
       <Home />
+      <EYFS />
+      <Grade />
+      <HighSchool />
 
       <Footer />
     </div>
