@@ -8,24 +8,29 @@ function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const [showSub, setShowSub] = useState(true);
 
-  const menu = [
-    { name: "home", submenu: [], id: 1 },
+  const [menu, setMenu] = useState([
+    { name: "home", submenu: [], id: 1, show: false },
     {
       name: "school",
       submenu: ["early years", "primary", "junior High School"],
       id: 2,
+      show: false,
     },
-    { name: "gallery", submenu: [], id: 3 },
-    { name: "portal", submenu: ["staff", "pupils"], id: 4 },
-  ];
+    { name: "gallery", submenu: [], id: 3, show: false },
+    { name: "portal", submenu: ["staff", "pupils"], id: 4, show: false },
+  ]);
 
-  const dropdown = showSub ? <FaMinus size={20} /> : <MdOutlineAdd size={20} />;
+  const handleSubmenu = (id) => {
+    const newSub = menu.map((item) =>
+      item.id === id ? { ...item, show: !item.show } : item
+    );
+    setMenu(newSub);
 
-  const handleDrop = (id) => {
-    if (menu.id == id) {
-      setShowSub(!showSub);
-    }
+    console.log(menu);
   };
+
+  // declare dropdown arrow for mobile view
+  const dropdown = showSub ? <MdOutlineAdd size={20} /> : <FaMinus size={20} />;
 
   return (
     <>
@@ -35,16 +40,16 @@ function Navbar() {
         </a>
 
         <div
-          onClick={() => setShowNav(!showNav)}
+          // onClick={() => setShowNav(!showNav)}
           className=" hidden w-1/2 md:flex  justify-evenly  text-slate-100"
         >
           {menu.map((menu, index) => (
             <div
               key={index}
               className="flex items-center justify-center capitalize relative "
-              onClick={() => setShowNav(!showNav)}
-              onMouseEnter={() => setShowNav(!showNav)}
-              onMouseLeave={() => setShowNav(!showNav)}
+              onClick={() => handleSubmenu(menu.id)}
+              onMouseEnter={() => handleSubmenu(menu.id)}
+              onMouseLeave={() => handleSubmenu(menu.id)}
             >
               {menu.name}
               {menu.submenu.length > 1 ? (
@@ -56,7 +61,7 @@ function Navbar() {
                 ""
               )}
 
-              {showNav && menu.submenu.length > 0 && (
+              {menu.show && menu.submenu.length > 0 && (
                 <div className="w-[150px] absolute top-8 bg-slate-600 text-red-600 px-2 py-3">
                   {menu.submenu.map((item, index) => (
                     <div key={index} className="">
@@ -87,12 +92,21 @@ function Navbar() {
               <div key={index} className="w-full">
                 <div
                   className="w-full mx-auto flex items-center justify-between text-left capitalize p-4"
-                  onClick={handleDrop(menu.id)}
+                  onClick={() => handleSubmenu(menu.id)}
                 >
                   <a href="">{menu.name}</a>
-                  {menu.submenu.length > 1 ? dropdown : ""}
+                  {menu.submenu.length > 1 ? (
+                    menu.show ? (
+                      <FaMinus size={20} />
+                    ) : (
+                      <MdOutlineAdd size={20} />
+                    )
+                  ) : (
+                    ""
+                  )}
                 </div>
-                {showSub &&
+                {menu.show &&
+                  menu.submenu.length > 0 &&
                   menu.submenu.map((item, index) => (
                     <h3
                       key={index}

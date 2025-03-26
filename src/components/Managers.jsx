@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";\
-import 'swiper/css/navigation';
+
 import gladys from "../assets/Gladys.jpg";
 import director from "../assets/director.jpg";
 import atiga from "../assets/Atiga.jpg";
