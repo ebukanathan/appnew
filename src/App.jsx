@@ -7,7 +7,7 @@ import EYFS from "./Pages/EYFS";
 import Grade from "./Pages/Grade";
 import HighSchool from "./Pages/HighSchool";
 import TryNav from "./components/TryNav";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       <Outlet />
 
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }

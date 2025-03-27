@@ -14,7 +14,7 @@ function Navbar() {
     { name: "home", submenu: [], id: 1, show: false },
     {
       name: "school",
-      submenu: ["eyfs", "primary", "High School"],
+      submenu: ["eyfs", "primary", "high school"],
       id: 2,
       show: false,
     },
