@@ -3,6 +3,8 @@ import Logo from "../assets/Apearl_badge.png";
 import { MdClose, MdOutlineAdd } from "react-icons/md";
 import { FaBars, FaMinus } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
+NavLink;
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -12,7 +14,7 @@ function Navbar() {
     { name: "home", submenu: [], id: 1, show: false },
     {
       name: "school",
-      submenu: ["early years", "primary", "junior High School"],
+      submenu: ["eyfs", "primary", "High School"],
       id: 2,
       show: false,
     },
@@ -39,12 +41,10 @@ function Navbar() {
           <img src={Logo} alt="" className="w-auto" />
         </a>
 
-        <div
-          // onClick={() => setShowNav(!showNav)}
-          className=" hidden w-1/2 md:flex  justify-evenly  text-slate-100"
-        >
+        <div className=" hidden w-1/2 md:flex  justify-evenly  text-slate-100">
           {menu.map((menu, index) => (
-            <div
+            <NavLink
+              to={menu.submenu.length > 0 ? "#" : `/${menu.name}`}
               key={index}
               className="flex items-center justify-center capitalize relative "
               onClick={() => handleSubmenu(menu.id)}
@@ -62,15 +62,15 @@ function Navbar() {
               )}
 
               {menu.show && menu.submenu.length > 0 && (
-                <div className="w-[150px] absolute top-8 bg-slate-600 text-red-600 px-2 py-3">
+                <div className=" flex flex-col w-[150px] absolute top-8 bg-slate-600 text-red-600 px-2 py-3 rounded-md">
                   {menu.submenu.map((item, index) => (
-                    <div key={index} className="">
+                    <NavLink to={`/${item}`} key={index} className="">
                       {item}
-                    </div>
+                    </NavLink>
                   ))}
                 </div>
               )}
-            </div>
+            </NavLink>
           ))}
         </div>
 

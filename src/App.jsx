@@ -7,17 +7,19 @@ import EYFS from "./Pages/EYFS";
 import Grade from "./Pages/Grade";
 import HighSchool from "./Pages/HighSchool";
 import TryNav from "./components/TryNav";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Navbar />
 
-      <Hero />
+      {/* <Hero />
       <Home />
       <EYFS />
       <Grade />
-      <HighSchool />
+      <HighSchool /> */}
+      <Outlet />
 
       <Footer />
     </div>

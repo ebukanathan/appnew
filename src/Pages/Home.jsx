@@ -15,9 +15,11 @@ import highgrade from "../assets/highgrade.jpg";
 import NewsandEvents from "../components/NewsandEvents";
 import Managers from "../components/Managers";
 import { TbTargetArrow, TbBinoculars } from "react-icons/tb";
+import Hero from "../components/Hero";
+import { NavLink } from "react-router-dom";
 function Home() {
   const sections = [
-    { name: "early years", image: highearly, color: "green" },
+    { name: "eyfs", image: highearly, color: "green" },
     { name: "primary", image: highgrade, color: "purple" },
     { name: "Junior High", image: highfront, color: "orange" },
   ];
@@ -30,9 +32,11 @@ function Home() {
   ];
   return (
     <>
+      <Hero />
       <div className="  mt-0  w-full mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
         {sections.map((item, index) => (
-          <div
+          <NavLink
+            to={`/${item.name}`}
             key={index}
             className="rounded-lg border-none text-xl   my-2 text-center hover:opacity-75"
             style={{ backgroundColor: item.color }}
@@ -40,7 +44,7 @@ function Home() {
             {/* <div className="bg-red-400  w-full">ghhh</div> */}
             <img src={item.image} alt="" className="rounded-sm" />
             <div className="p-3 capitalize hover:text-white">{item.name}</div>
-          </div>
+          </NavLink>
         ))}
       </div>
 
