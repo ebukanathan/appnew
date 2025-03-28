@@ -90,9 +90,10 @@ function Navbar() {
           <div className="  flex flex-col absolute items-center justify-center  w-2/3 bg-[rgba(240,244,246,0.75)]  z-50">
             {menu.map((menu, index) => (
               <NavLink
+                y
                 to={menu.submenu.length > 0 ? "#" : `/${menu.name}`}
                 key={index}
-                className="w-full"
+                className="w-full  "
               >
                 <div
                   className="w-full mx-auto flex items-center justify-between text-left capitalize p-4"
@@ -115,7 +116,7 @@ function Navbar() {
                     <NavLink
                       to={`/${item}`}
                       key={index}
-                      className=" ml-10 pb-1 mb-4 border-b-2 border-b-black capitalize"
+                      className=" flex flex-col ml-10 pb-1 mb-4 border-b-2 border-b-black capitalize"
                     >
                       {item}
                     </NavLink>
