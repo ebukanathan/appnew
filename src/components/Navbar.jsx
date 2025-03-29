@@ -90,6 +90,8 @@ function Navbar() {
           {showNav ? <MdClose size={25} /> : <FaBars size={25} />}
         </button>
       </div>
+
+      {/* mobile */}
       <div className="relatve md:hidden">
         {showNav && (
           <div className="  flex flex-col absolute items-center justify-center  w-2/3 bg-[rgba(240,244,246,0.75)]  z-50">
@@ -99,6 +101,7 @@ function Navbar() {
                 to={menu.submenu.length > 0 ? "#" : `/${menu.name}`}
                 key={index}
                 className="w-full  "
+                onClick={() => setShowNav(!showNav)}
               >
                 <div
                   className="w-full mx-auto flex items-center justify-between text-left capitalize p-4"
