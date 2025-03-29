@@ -2,19 +2,27 @@ import React from "react";
 
 function SetionHero({ title, tagline, image }) {
   return (
-    <div className=" w-[100%] min-h-[40vh] relative overflow-hidden  z-100 bg-[rgba(0,0,0,0.9)] flex justify-start items-end  md:h-[80vh]">
-      <div className="z-10 text-white text-5xl w-1/2 capitalize max-w-[960px] ml-6 md:text-5xl font-bold">
-        {title}
-        <span>
-          <p className="text-sm font-medium">{tagline}</p>
-        </span>
-      </div>
-      <img
-        src={image}
-        alt=""
-        className="absolute top-0 w-full  bg-contain bg-center"
-      />
-    </div>
+    <>
+      <section
+        className="relative w-full h-[70vh] bg-cover bg-center md:h-screen"
+        style={{ backgroundImage: `url(${image})` }}
+      >
+        {/* Transparent Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center h-full">
+          <div className="w-full md:w-2/3 lg:w-1/2 pl-8  opacity-0 animate-fadeIn md:pl-20">
+            <h1 className="text-white text-4xl md:text-6xl font-bold">
+              {title}
+            </h1>
+            <p className="w-2/3 text-white text-lg md:text-xl mt-4">
+              {tagline}
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

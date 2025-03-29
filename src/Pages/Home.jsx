@@ -50,18 +50,7 @@ function Home() {
 
       {/* Aboutus */}
 
-      <div className=" w-4/5 mx-auto  ">
-        <p className=" w-full max-w-[960px] mx-auto text-sm text-center lg:w-1/2 ">
-          Welcome to APEARL School website. I hope it offers an insightful
-          preview of a school which aims to provide its pupils with an excellent
-          all round experience. As we know, schools are meant to be citadels of
-          learning where high moral standard, discipline and the fear of God are
-          expected to be inculcated in the pupils with a difference. Regarding
-          the qualities stated above, APEARL school’s Managers outstandingly
-          discharge these responsibilities without reserve. No form of laxity is
-          tolerated in any academic sphere neither are morals and diligence
-          toyed with.
-        </p>
+      {/* <div className=" w-4/5 mx-auto  ">
         <div className="w-full mt-6 mx-auto  md:flex  gap-4">
           <div className="  relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
             <TbBinoculars
@@ -89,11 +78,57 @@ function Home() {
         </div>
 
         <Buttoncall>learn more </Buttoncall>
-      </div>
+      </div> */}
+      <section className="w-full py-12 px-6 md:px-12 lg:px-20 bg-gray-100 flex flex-col items-center justify-center">
+        <div className="max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+            Welcome to Our Platform
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+            Welcome to APEARL School website. I hope it offers an insightful
+            preview of a school which aims to provide its pupils with an
+            excellent all round experience. As we know, schools are meant to be
+            citadels of learning where high moral standard, discipline and the
+            fear of God are expected to be inculcated in the pupils with a
+            difference. Regarding the qualities stated above, APEARL school’s
+            Managers outstandingly discharge these responsibilities without
+            reserve. No form of laxity is tolerated in any academic sphere
+            neither are morals and diligence toyed with.
+          </p>
+        </div>
+
+        <div className="w-2/3 mt-6 mx-auto  md:flex  md: gap-4">
+          <div className="  relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
+            <TbBinoculars
+              size={100}
+              className="absolute top-[25%] left-[35%] opacity-10 "
+            />
+            <h3 className="text-center text-xl capitalize p-0">Our vision</h3>
+            <p className="p-0">
+              {" "}
+              To Nurture children to the best they can be in an enabling and
+              friendly environment
+            </p>
+          </div>
+          <div className="relative justify-center items-center w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
+            <TbTargetArrow
+              size={100}
+              className="absolute top-[25%] left-[35%] opacity-10 "
+            />
+            <h3 className="text-center text-xl capitalize p-0">Our Mission</h3>
+            <p className="p-0">
+              To Nurture children to the best they can be in an enabling and
+              friendly environment
+            </p>
+          </div>
+        </div>
+
+        <Buttoncall>learn more </Buttoncall>
+      </section>
       {/* CLUBS AND EXTRACURRICULAR */}
 
       {/* desktop */}
-      <div className="w-4/5 my-5 mx-auto">
+      {/* <div className="w-4/5 my-5 mx-auto">
         <h2 className="text-xl capitalise text-center ">
           clubs and extra curricular
         </h2>
@@ -113,7 +148,7 @@ function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* mobile */}
       <div className="w-full p-1 mx-auto md:hidden">
@@ -142,6 +177,36 @@ function Home() {
           ))}
         </Swiper>
       </div>
+
+      <section className="w-full py-12 px-6 md:px-12 lg:px-20 bg-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+          Clubs And Extra Curricullar
+        </h2>
+
+        {/* Image Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {clubs.map((card, index) => (
+            <div
+              key={index}
+              className="relative group overflow-hidden rounded-lg shadow-lg"
+            >
+              {/* Card Image */}
+              <img
+                src={card.photo}
+                alt={card.photo}
+                className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+
+              {/* Transparent Overlay with Title */}
+              <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4">
+                <h3 className="text-white text-xl font-semibold">
+                  {card.name}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <TwoColContainer>
         {/* photo */}

@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EYFS from "./Pages/EYFS.jsx";
 import Grade from "./Pages/Grade.jsx";
 import HighSchool from "./Pages/HighSchool.jsx";
+import Gallery from "./Pages/Gallery.jsx";
+import Aboutus from "./Pages/Aboutus.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "/high school",
         element: <HighSchool />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/about",
+        element: <Aboutus />,
       },
     ],
   },

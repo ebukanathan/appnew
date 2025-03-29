@@ -12,6 +12,7 @@ function Navbar() {
 
   const [menu, setMenu] = useState([
     { name: "home", submenu: [], id: 1, show: false },
+    { name: "About", submenu: [], id: 3, show: false },
     {
       name: "school",
       submenu: ["eyfs", "primary", "high school"],
@@ -46,7 +47,7 @@ function Navbar() {
             <NavLink
               to={menu.submenu.length > 0 ? "#" : `/${menu.name}`}
               key={index}
-              className="flex items-center justify-center capitalize relative "
+              className="flex items-center justify-center capitalize relative  px-4 py-1  hover:text-white   after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full "
               onClick={() => handleSubmenu(menu.id)}
               onMouseEnter={() => handleSubmenu(menu.id)}
               onMouseLeave={() => handleSubmenu(menu.id)}
@@ -62,9 +63,13 @@ function Navbar() {
               )}
 
               {menu.show && menu.submenu.length > 0 && (
-                <div className=" flex flex-col w-[150px] absolute top-8 bg-slate-600 text-red-600 px-2 py-3 rounded-md">
+                <div className=" flex flex-col w-[150px] absolute top-8 bg-slate-600 text-red-600 px-0 py-3 rounded-md">
                   {menu.submenu.map((item, index) => (
-                    <NavLink to={`/${item}`} key={index} className="">
+                    <NavLink
+                      to={`/${item}`}
+                      key={index}
+                      className="w-full p-2 hover:bg-white transition duration-300 ease-in"
+                    >
                       {item}
                     </NavLink>
                   ))}

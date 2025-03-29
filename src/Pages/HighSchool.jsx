@@ -5,7 +5,7 @@ import highschool1 from "../assets/highschool1.jpg";
 import grade3 from "../assets/grade3.jpg";
 function HighSchool() {
   return (
-    <div>
+    <div className="">
       <SectionHero
         title="High school"
         tagline="Our Junior High School nurtures young minds with a dynamic curriculum, innovative learning experiences, and a supportive environment. Join us in shaping bright futures—one student at a time."
