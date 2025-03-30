@@ -101,7 +101,9 @@ function Navbar() {
                 to={menu.submenu.length > 0 ? "#" : `/${menu.name}`}
                 key={index}
                 className="w-full  "
-                onClick={() => setShowNav(!showNav)}
+                onClick={() =>
+                  menu.submenu.length > 0 ? "" : setShowNav(!showNav)
+                }
               >
                 <div
                   className="w-full mx-auto flex items-center justify-between text-left capitalize p-4"
@@ -125,6 +127,7 @@ function Navbar() {
                       to={`/${item}`}
                       key={index}
                       className=" flex flex-col ml-10 pb-1 mb-4 border-b-2 border-b-black capitalize"
+                      onClick={() => setShowNav(!showNav)}
                     >
                       {item}
                     </NavLink>
