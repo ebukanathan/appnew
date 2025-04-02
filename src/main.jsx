@@ -9,6 +9,7 @@ import Grade from "./Pages/Grade.jsx";
 import HighSchool from "./Pages/HighSchool.jsx";
 import Gallery from "./Pages/Gallery.jsx";
 import Aboutus from "./Pages/Aboutus.jsx";
+import Redirect from "./Pages/Redirect.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <Aboutus />,
+      },
+      {
+        path: "/parents",
+        element: <Redirect url="https://apearl.edves.net/parents/" />,
       },
     ],
   },

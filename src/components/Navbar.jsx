@@ -20,7 +20,7 @@ function Navbar() {
       show: false,
     },
     { name: "gallery", submenu: [], id: 3, show: false },
-    { name: "portal", submenu: ["staff", "pupils"], id: 4, show: false },
+    { name: "portal", submenu: ["staff", "Parents"], id: 4, show: false },
   ]);
 
   const handleSubmenu = (id) => {
