@@ -4,70 +4,38 @@ import mont from "../assets/mont.jpg";
 import eyfs3 from "../assets/eyfs3.jpg";
 
 function EYFS() {
+  const qualities = [
+    {
+      title: "Safe Environment",
+      description: "A secure and nurturing space for children to learn.",
+    },
+    {
+      title: "Play-Based Learning",
+      description: "Encouraging development through structured and free play.",
+    },
+    {
+      title: "Inclusive Approach",
+      description:
+        "Supporting all children, regardless of background or ability.",
+    },
+    {
+      title: "Qualified Staff",
+      description: "Experienced educators fostering growth and curiosity.",
+    },
+    {
+      title: "Parental Involvement",
+      description:
+        "Engaging families in their child's early education journey.",
+    },
+  ];
   return (
     <>
-      <SectionHero title="EYFS" tagline="catch them young" image={mont} />
-      {/* <div className="flex flex-col w-full  items-center justify-center ">
-        <div className="flex flex-col p-4 md:flex-row gap-8">
-          <div className="fle flex-col  w-full md:w-1/2 p-4">
-            <h1 className=" text-3xl my-5  ">Our curriculum</h1>
-            <p className="font-normal text-lg mb-5 text-justify">
-              Our school provides a high-quality, globally competitive education
-              by integrating the Nigerian curriculum with the British
-              methodology in teaching and learning. This unique blend ensures
-              that learners develop strong academic skills, critical thinking
-              abilities, creativity, and global awareness while maintaining
-              their cultural identity.
-            </p>
-            <p className="font-normal mb-5 text-justify">
-              {" "}
-              We employ learner-centered, inquiry-based learning, incorporating
-              modern teaching techniques, technology, project-based learning,
-              and interactive assessments to prepare learners for higher
-              education both within Nigeria and internationally.{" "}
-            </p>
-            {/* <p className="font-normal mb-5 text-justify">
-              {" "}
-              We emphasize academic excellence, holistic development, technology
-              integration, community engagement, inclusivity and modern
-              infrastructure.
-            </p>{" "}
-            <p className="font-normal mb-5 text-justify">
-              Our curriculum ensures that learners progress from foundational
-              knowledge (key stage 1 Primary 1–3) to analytical and independent
-              thinking ( key stage 2 Primary 4–6) while preparing them for
-              higher education and global opportunities.
-            </p> */}
-      {/* </div>
-          <div className="w-full md:w-1/2">
-            <img src={eyfs3} alt="" className="w-full h-full bg-cover" />
-          </div>
-        </div> */}
-      {/* <div className="flex flex-col-reverse p-4 md:flex-row-reverse gap-8">
-          <div className="fle flex-col  w-full md:w-1/2 p-4">
-            <p className="font-normal mb-5 text-justify">
-              {" "}
-              We emphasize academic excellence, holistic development, technology
-              integration, community engagement, inclusivity and modern
-              infrastructure.
-            </p>{" "}
-            <p className="font-normal mb-5 text-justify">
-              Our curriculum ensures that learners progress from foundational
-              knowledge (key stage 1 Primary 1–3) to analytical and independent
-              thinking ( key stage 2 Primary 4–6) while preparing them for
-              higher education and global opportunities.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2">
-            <img
-              src={mont}
-              alt=""
-              className="w-full h-auto bg-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </div> */}{" "}
-      */}
+      <SectionHero
+        title="EYFS"
+        tagline="At Apearl, we are committed to nurturing young minds in a safe, child-centred learning environment where every child feels valued, inspired, and empowered. Our approach to early education goes beyond academics, fostering confidence, independence, and a lifelong love for learning."
+        image={mont}
+      />
+
       <section className="w-full py-12 px-6 md:px-12 lg:px-20">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Left Column - Image */}
@@ -85,12 +53,11 @@ function EYFS() {
               Our Curriculum
             </h2>
             <p className="mt-4 text-gray-600 text-lg">
-              Our school provides a high-quality, globally competitive education
-              by integrating the Nigerian curriculum with the British
-              methodology in teaching and learning. This unique blend ensures
-              that learners develop strong academic skills, critical thinking
-              abilities, creativity, and global awareness while maintaining
-              their cultural identity.
+              We believe that every child is unique, and our mission is to
+              provide a stimulating, inclusive, and supportive setting where
+              they can explore, create, and grow at their own pace. Through
+              engaging experiences, we help children build strong foundations
+              for future success, both academically and emotionally.
             </p>
           </div>
         </div>
@@ -108,15 +75,41 @@ function EYFS() {
 
           {/* Right Column - Content */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800"></h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              We employ learner-centered, inquiry-based learning, incorporating
-              modern teaching techniques, technology, project-based learning,
-              and interactive assessments to prepare learners for higher
-              education both within Nigeria and internationally
-            </p>
+            <h4 className="text-lg md:text-xl  text-gray-800">
+              The EYFS framework focuses on seven essential areas of
+              development, carefully designed to help children flourish in all
+              aspects of life:
+            </h4>
+            <ul className="space-y-3">
+              {qualities.map((quality, index) => (
+                <li
+                  key={index}
+                  className="grid grid-cols-2 p-4  bg-white rounded-lg shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-blue-600">
+                    {quality.title}
+                  </h3>
+                  {/* <p className="text-gray-700">{quality.description}</p> */}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
+      </section>
+      <section className="p-6 bg-gray-100 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
+          EYFS Qualities
+        </h2>
+        <ul className="space-y-3">
+          {qualities.map((quality, index) => (
+            <li key={index} className="p-4 bg-white rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-600">
+                {quality.title}
+              </h3>
+              <p className="text-gray-700">{quality.description}</p>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );
