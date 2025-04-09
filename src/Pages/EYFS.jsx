@@ -2,6 +2,8 @@ import React from "react";
 import SectionHero from "../components/SectionHero";
 import mont from "../assets/mont.jpg";
 import eyfs3 from "../assets/eyfs3.jpg";
+import eyfs from "../assets/eyfs.jpg";
+import eyfspe from "../assets/eyfspe.jpg";
 
 function EYFS() {
   const qualities = [
@@ -33,7 +35,7 @@ function EYFS() {
       <SectionHero
         title="EYFS"
         tagline="At Apearl, we are committed to nurturing young minds in a safe, child-centred learning environment where every child feels valued, inspired, and empowered. Our approach to early education goes beyond academics, fostering confidence, independence, and a lifelong love for learning."
-        image={mont}
+        image={eyfs}
       />
 
       <section className="w-full py-12 px-6 md:px-12 lg:px-20">
@@ -67,7 +69,7 @@ function EYFS() {
           {/* Left Column - Image */}
           <div className="w-full md:w-1/2">
             <img
-              src={eyfs3}
+              src={eyfspe}
               alt="Placeholder"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -96,7 +98,7 @@ function EYFS() {
           </div>
         </div>
       </section>
-      <section className="p-6 bg-gray-100 rounded-lg shadow-md">
+      {/* <section className="p-6 bg-gray-100 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
           EYFS Qualities
         </h2>
@@ -110,7 +112,7 @@ function EYFS() {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </>
   );
 }

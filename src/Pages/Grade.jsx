@@ -2,6 +2,7 @@ import React from "react";
 import SectionHero from "../components/SectionHero";
 import grade from "../assets/grade.jpg";
 import grade3 from "../assets/grade3.jpg";
+import bbcourt from "../assets/bbcourt.jpg";
 
 function Grade() {
   return (
@@ -9,7 +10,7 @@ function Grade() {
       <SectionHero
         title="Primary"
         tagline="our Primary School section provides a nurturing and engaging learning environment for children in Grades 1 to 6. We are committed to laying a strong foundation for lifelong learning by fostering curiosity, creativity, and critical thinking in our young learners."
-        image={grade}
+        image={bbcourt}
       />
       <div className="flex flex-col w-full  items-center justify-center ">
         <div className="flex flex-col p-4 md:flex-row gap-8">

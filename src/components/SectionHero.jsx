@@ -1,6 +1,6 @@
 import React from "react";
 
-function SetionHero({ title, tagline, image }) {
+function SectionHero({ title, tagline, image }) {
   return (
     <>
       <section
@@ -26,4 +26,4 @@ function SetionHero({ title, tagline, image }) {
   );
 }
 
-export default SetionHero;
+export default SectionHero;

@@ -7,7 +7,7 @@ import chess from "../assets/chess.jpg";
 import robotics from "../assets/robotics.jpg";
 import takwendo from "../assets/takwendo.jpg";
 import ballet from "../assets/ballet.jpg";
-// import music from "../assets/music.jpg";
+import music from "../assets/music.jpg";
 import sen from "../assets/sen.jpg";
 import highfront from "../assets/highfront.jpg";
 import highearly from "../assets/highearly.jpg";
@@ -28,57 +28,14 @@ function Home() {
     { name: "robotics", photo: robotics },
     { name: "takwendo", photo: takwendo },
     { name: "ballet", photo: ballet },
-    // { name: "music", photo: music },
+    { name: "music", photo: music },
   ];
   return (
     <>
       <Hero />
-      <div className="  mt-0  w-full mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
-        {sections.map((item, index) => (
-          <NavLink
-            to={`/${item.name}`}
-            key={index}
-            className="rounded-lg border-none text-xl   my-2 text-center hover:opacity-75"
-            style={{ backgroundColor: item.color }}
-          >
-            {/* <div className="bg-red-400  w-full">ghhh</div> */}
-            <img src={item.image} alt="" className="rounded-sm" />
-            <div className="p-3 capitalize hover:text-white">{item.name}</div>
-          </NavLink>
-        ))}
-      </div>
 
       {/* Aboutus */}
 
-      {/* <div className=" w-4/5 mx-auto  ">
-        <div className="w-full mt-6 mx-auto  md:flex  gap-4">
-          <div className="  relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
-            <TbBinoculars
-              size={100}
-              className="absolute top-[25%] left-[35%] opacity-10 "
-            />
-            <h3 className="text-center text-xl capitalize p-0">Our vision</h3>
-            <p className="p-0">
-              {" "}
-              To Nurture children to the best they can be in an enabling and
-              friendly environment
-            </p>
-          </div>
-          <div className="relative justify-center items-center w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
-            <TbTargetArrow
-              size={100}
-              className="absolute top-[25%] left-[35%] opacity-10 "
-            />
-            <h3 className="text-center text-xl capitalize p-0">Our Mission</h3>
-            <p className="p-0">
-              To Nurture children to the best they can be in an enabling and
-              friendly environment
-            </p>
-          </div>
-        </div>
-
-        <Buttoncall>learn more </Buttoncall>
-      </div> */}
       <section className="w-full py-12 px-6 md:px-12 lg:px-20 bg-gray-100 flex flex-col items-center justify-center">
         <div className="max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -98,7 +55,7 @@ function Home() {
         </div>
 
         <div className="w-2/3 mt-6 mx-auto  md:flex  md: gap-4">
-          <div className="  relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
+          <div className="  shadow-lg relative w-full mx-auto my-2 rounded-full text-center bg-blue-300 p-5 md:w-[300px] h-[150px]">
             <TbBinoculars
               size={100}
               className="absolute top-[25%] left-[35%] opacity-10 "
@@ -110,7 +67,7 @@ function Home() {
               friendly environment
             </p>
           </div>
-          <div className="relative justify-center items-center w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
+          <div className=" shadow-lg relative justify-center items-center w-full mx-auto my-2 rounded-full text-center bg-rose-300 p-5 md:w-[300px] h-[150px]">
             <TbTargetArrow
               size={100}
               className="absolute top-[25%] left-[35%] opacity-10 "
@@ -125,6 +82,22 @@ function Home() {
 
         <Buttoncall>learn more </Buttoncall>
       </section>
+
+      {/* eyfs,primary and highschool section */}
+      <div className="  mt-0  w-full mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
+        {sections.map((item, index) => (
+          <NavLink
+            to={`/${item.name}`}
+            key={index}
+            className="rounded-lg border-none text-xl   my-2 text-center hover:opacity-75"
+            style={{ backgroundColor: item.color }}
+          >
+            {/* <div className="bg-red-400  w-full">ghhh</div> */}
+            <img src={item.image} alt="" className="rounded-sm" />
+            <div className="p-3 capitalize hover:text-white">{item.name}</div>
+          </NavLink>
+        ))}
+      </div>
       {/* CLUBS AND EXTRACURRICULAR */}
 
       {/* desktop */}
