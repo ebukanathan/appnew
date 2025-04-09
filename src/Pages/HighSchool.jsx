@@ -3,6 +3,7 @@ import SectionHero from "../components/SectionHero";
 import highschl from "../assets/highschl.jpg";
 import highschool1 from "../assets/highschool1.jpg";
 import grade3 from "../assets/grade3.jpg";
+import highschoolclass from "../assets/highschoolclass.jpg";
 function HighSchool() {
   return (
     <div className="">
@@ -51,7 +52,11 @@ function HighSchool() {
                         </p> */}
           </div>
           <div className="w-full md:w-1/2">
-            <img src={grade3} alt="" className="w-full h-full bg-cover" />
+            <img
+              src={highschoolclass}
+              alt=""
+              className="w-full h-full bg-cover"
+            />
           </div>
         </div>
 

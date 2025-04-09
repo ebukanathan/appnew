@@ -9,19 +9,20 @@ import takwendo from "../assets/takwendo.jpg";
 import ballet from "../assets/ballet.jpg";
 import music from "../assets/music.jpg";
 import sen from "../assets/sen.jpg";
-import highfront from "../assets/highfront.jpg";
-import highearly from "../assets/highearly.jpg";
+import highfronttwo from "../assets/highfronttwo.jpg";
+// import highearly from "../assets/highearly.jpg";
 import highgrade from "../assets/highgrade.jpg";
 import NewsandEvents from "../components/NewsandEvents";
 import Managers from "../components/Managers";
 import { TbTargetArrow, TbBinoculars } from "react-icons/tb";
 import Hero from "../components/Hero";
 import { NavLink } from "react-router-dom";
+import trampoline from "../assets/trampoline.jpg";
 function Home() {
   const sections = [
-    { name: "eyfs", image: highearly, color: "green" },
+    { name: "eyfs", image: trampoline, color: "green" },
     { name: "primary", image: highgrade, color: "purple" },
-    { name: "Junior High", image: highfront, color: "orange" },
+    { name: "Junior High", image: highfronttwo, color: "orange" },
   ];
   const clubs = [
     { name: "chess", photo: chess },
@@ -84,7 +85,9 @@ function Home() {
       </section>
 
       {/* eyfs,primary and highschool section */}
-      <div className="  mt-0  w-full mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
+      <section className=""></section>
+      <div className="text-2xl  capitalize items-center ">our classes</div>
+      <div className="  mt-0  w-full h-auto mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
         {sections.map((item, index) => (
           <NavLink
             to={`/${item.name}`}
@@ -94,7 +97,7 @@ function Home() {
           >
             {/* <div className="bg-red-400  w-full">ghhh</div> */}
             <img src={item.image} alt="" className="rounded-sm" />
-            <div className="p-3 capitalize hover:text-white">{item.name}</div>
+            <div className=" p-3 capitalize hover:text-white">{item.name}</div>
           </NavLink>
         ))}
       </div>
