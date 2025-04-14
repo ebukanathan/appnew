@@ -20,9 +20,9 @@ import { NavLink } from "react-router-dom";
 import trampoline from "../assets/trampoline.jpg";
 function Home() {
   const sections = [
-    { name: "eyfs", image: trampoline, color: "green" },
-    { name: "primary", image: highgrade, color: "purple" },
-    { name: "Junior High", image: highfronttwo, color: "orange" },
+    { name: "eyfs", image: trampoline, color: "#67AE6E" },
+    { name: "primary", image: highgrade, color: "#4D55CC" },
+    { name: "Junior High", image: highfronttwo, color: "#FFA955" },
   ];
   const clubs = [
     { name: "chess", photo: chess },
@@ -86,8 +86,10 @@ function Home() {
 
       {/* eyfs,primary and highschool section */}
       <section className=""></section>
-      <div className="text-2xl  capitalize items-center ">our classes</div>
-      <div className="  mt-0  w-full h-auto mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 bg-[#f7f7f7]">
+      <div className="  mt-8 font-bold  text-3xl w-full capitalize text-center">
+        our classes
+      </div>
+      <div className="  mt-0  w-full h-auto mx-auto  md:mx-2 md:grid grid-cols-3  p-6 gap-3 my-6 ">
         {sections.map((item, index) => (
           <NavLink
             to={`/${item.name}`}
@@ -192,8 +194,8 @@ function Home() {
         {/* write up */}
         <div className="w-full pt-5">
           <h2 className="text-xl font-extrabold mb-3">
-            Empowering Every Child to Succeed – Welcome to Our Special
-            Educational Needs (SEN) Center!
+            Welcome to Our Special Educational Needs (SEN) Center - Empowering
+            Every Child to Succeed –
           </h2>
           <p className="text-sm">
             At Apearl Premier Private School, we believe that every child
