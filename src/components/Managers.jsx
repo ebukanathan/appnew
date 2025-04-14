@@ -11,7 +11,12 @@ import consultant from "../assets/consultant.jpg";
 
 function Managers() {
   const managers = [
-    { name: "Oluchi Okoro", image: director, title: "Direcctor", desc: "" },
+    {
+      name: "Esther Chibueze-Okoro",
+      image: director,
+      title: "Direcctor",
+      desc: "",
+    },
     { name: "Livinus Ngele", image: ngele, title: "Principal", desc: "" },
     { name: "Atiga Samuel", image: atiga, title: "Head teacher", desc: "" },
 
