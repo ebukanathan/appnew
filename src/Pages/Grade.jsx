@@ -10,7 +10,7 @@ function Grade() {
     <div>
       <SectionHero
         title="Primary"
-        tagline="our Primary School section provides a nurturing and engaging learning environment for children in Grades 1 to 6. We are committed to laying a strong foundation for lifelong learning by fostering curiosity, creativity, and critical thinking in our young learners."
+        tagline="Our Primary School section provides a nurturing and engaging learning environment for children in Grades 1 to 6. We are committed to laying a strong foundation for lifelong learning by fostering curiosity, creativity, and critical thinking in our young learners."
         image={bbcourt}
       />
 

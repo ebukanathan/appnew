@@ -12,11 +12,11 @@ function SectionHero({ title, tagline, image }) {
 
         {/* Content */}
         <div className="relative z-10 flex items-center h-full">
-          <div className="w-full md:w-2/3 lg:w-1/2 pl-8  opacity-0 animate-fadeIn md:pl-20">
+          <div className="w-full md:w-3/4 lg:w-1/2 pl-8  opacity-0 animate-fadeIn md:pl-20">
             <h1 className="text-white text-4xl md:text-6xl font-bold">
               {title}
             </h1>
-            <p className="w-2/3 text-white text-lg md:text-xl mt-4">
+            <p className="w-2/3 text-neutral-50 text-sm md:text-lg mt-4 tracking-wide">
               {tagline}
             </p>
           </div>
