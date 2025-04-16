@@ -6,6 +6,20 @@ import bbcourt from "../assets/bbcourt.jpg";
 import gradepupils from "../assets/gradepupils.jpg";
 
 function Grade() {
+  const subjects = [
+    "English language ",
+    "Mathematics ",
+    "Basic science",
+    "Physical and Health Education",
+    "Christian and Religious Knowledge/Islamic Religious Knowledge",
+    "National values",
+    "Information and communication technology",
+    "Music",
+    "Native languages (Igbo, Yoruba and Hausa)",
+    "Creative and Cultural Arts",
+    "Quantitative reasoning",
+    "Verbal reasoning",
+  ];
   return (
     <div>
       <SectionHero
@@ -30,7 +44,7 @@ function Grade() {
               engaging experiences, we help children build strong foundations
               for future success, both academically and emotionally.
             </p> */}
-            <h1 className=" text-3xl my-5  ">Our curriculum</h1>
+            {/* <h1 className=" text-3xl my-5  ">Our curriculum</h1> */}
             <p className="font-normal mb-5 text-justify">
               Our school provides a high-quality, globally competitive education
               by integrating the Nigerian curriculum with the British
@@ -60,17 +74,60 @@ function Grade() {
         <div className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-10">
           {/* Right Column - Content */}
           <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="py-3">
+              <h2 className="text-xl font-semibold">
+                key stage one (Lower Primary School)
+              </h2>
+            </div>
             <p className="font-normal mb-5 text-justify">
-              {" "}
-              We emphasize academic excellence, holistic development, technology
-              integration, community engagement, inclusivity and modern
-              infrastructure.
+              Key Stage One, which includes grade 1, grade 2 and grade 3, is
+              where our pupils begin to build on the solid foundation laid in
+              the Early Years. At this stage, our focus is on nurturing
+              curiosity, encouraging independence, and developing core academic
+              and social skills in a supportive and stimulating environment.
             </p>{" "}
             <p className="font-normal mb-5 text-justify">
-              Our curriculum ensures that learners progress from foundational
-              knowledge (key stage 1 Primary 1–3) to analytical and independent
-              thinking ( key stage 2 Primary 4–6) while preparing them for
-              higher education and global opportunities.
+              Our dedicated KS1 team ensures that learning is both engaging and
+              meaningful. Through a carefully structured curriculum, we focus on
+              literacy, numeracy, science, ICT and the humanities, while also
+              integrating creative subjects such as art, music, and physical
+              education. Lessons are designed to be interactive, practical, and
+              full of real-life context to make learning exciting and relevant
+              for our young learners.
+            </p>
+          </div>
+          {/* Left Column - Image */}
+          <div className="w-full md:w-1/2">
+            <img
+              src={gradepupils}
+              alt="Placeholder"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-12 px-6 md:px-12 lg:px-20">
+        <div className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-10">
+          {/* Right Column - Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="py-3">
+              <h2 className="text-xl font-semibold">
+                Key Stage Two (Upper Primary School)
+              </h2>
+            </div>
+            <p className="font-normal mb-5 text-justify">
+              Key Stage Two, which includes grade 3 to 6, is a time of
+              remarkable development — academically, socially, and emotionally.
+              At this stage, we aim to challenge, inspire, and support each
+              child as they progress through a broad and balanced curriculum
+              designed to spark curiosity and build resilience
+            </p>{" "}
+            <p className="font-normal mb-5 text-justify">
+              In KS2, pupils take on greater responsibility for their learning
+              and begin to develop a deeper sense of self and the world around
+              them. Through leadership opportunities, group projects, and
+              real-world learning experiences, we help them become confident
+              communicators, empathetic teammates, and responsible citizens.
             </p>
           </div>
           {/* Left Column - Image */}
