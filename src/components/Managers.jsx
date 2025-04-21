@@ -44,7 +44,7 @@ function Managers() {
         <Swiper
           spaceBetween={10}
           Navigation
-          slidesPerView={3}
+          slidesPerView={3.5}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           arrow={true}
@@ -54,11 +54,11 @@ function Managers() {
               key={index}
               className="relative w-full bg-red-500 rounded-lg"
             >
-              <div className="w-full">
+              <div className="w-full h-auto">
                 <img
                   src={item.image}
                   alt=""
-                  className="max-w-full max-h-full cover rounded-lg"
+                  className="max-w-full  cover rounded-lg"
                 />
               </div>
               <div className="opacity-0 w-full p-2 text-white text-xl uppercase bg-[rgba(0,0,0,0.75)] absolute bottom-0 right-0 left-0 hover:opacity-75 transition-all duration-500 ease-in-out">

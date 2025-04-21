@@ -34,9 +34,7 @@ function Home() {
   return (
     <>
       <Hero />
-
       {/* Aboutus */}
-
       <section className="w-full py-12 px-6 md:px-12 lg:px-20 bg-gray-100 flex flex-col items-center justify-center">
         <div className="max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -83,7 +81,6 @@ function Home() {
 
         <Buttoncall>learn more </Buttoncall>
       </section>
-
       {/* eyfs,primary and highschool section */}
       <section className=""></section>
       <div className="  mt-8 font-bold  text-3xl w-full capitalize text-center">
@@ -104,7 +101,6 @@ function Home() {
         ))}
       </div>
       {/* CLUBS AND EXTRACURRICULAR */}
-
       {/* desktop */}
       {/* <div className="w-4/5 my-5 mx-auto">
         <h2 className="text-xl capitalise text-center ">
@@ -127,9 +123,9 @@ function Home() {
           ))}
         </div>
       </div> */}
-
+      {/* 
       {/* mobile */}
-      <div className="w-full p-1 mx-auto md:hidden">
+      {/* <div className="w-full p-1 mx-auto md:hidden">
         <Swiper
           spaceBetween={10}
           slidesPerView={1.5}
@@ -154,7 +150,7 @@ function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div>{" "} */}
 
       <section className="w-full py-12 px-6 md:px-12 lg:px-20 bg-gray-100">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
@@ -185,7 +181,6 @@ function Home() {
           ))}
         </div>
       </section>
-
       <TwoColContainer>
         {/* photo */}
         <div className="">
@@ -208,7 +203,6 @@ function Home() {
           <Buttoncall>learn more</Buttoncall>
         </div>
       </TwoColContainer>
-
       <NewsandEvents />
       <Managers />
     </>

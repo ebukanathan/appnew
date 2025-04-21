@@ -14,7 +14,7 @@ function NewsandEvents() {
     {
       image: edo,
       title: "End of Year Party",
-      desc: "a vibrant showcase of traditions, music, dance, and fashion from diverse cultures! 🌎✨",
+      desc: "a vibrant showcase of traditions, music, dance, ! 🌎✨",
     },
     {
       image: interhouse,

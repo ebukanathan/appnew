@@ -4,6 +4,7 @@ import grade from "../assets/grade.jpg";
 import grade3 from "../assets/grade3.jpg";
 import bbcourt from "../assets/bbcourt.jpg";
 import gradepupils from "../assets/gradepupils.jpg";
+import gradeclassroom from "../assets/gradeclassroom.jpg";
 
 function Grade() {
   const subjects = [
@@ -99,7 +100,7 @@ function Grade() {
           {/* Left Column - Image */}
           <div className="w-full md:w-1/2">
             <img
-              src={gradepupils}
+              src={gradeclassroom}
               alt="Placeholder"
               className="w-full h-auto rounded-lg shadow-lg"
             />
