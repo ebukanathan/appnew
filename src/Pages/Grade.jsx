@@ -90,8 +90,8 @@ function Grade() {
             <p className="font-normal mb-5 text-justify">
               Our dedicated KS1 team ensures that learning is both engaging and
               meaningful. Through a carefully structured curriculum, we focus on
-              literacy, numeracy, science, ICT and the humanities, while also
-              integrating creative subjects such as art, music, and physical
+              literacy, numeracy, science, ICT, and the humanities, while also
+              incorporating creative subjects like art, music, and physical
               education. Lessons are designed to be interactive, practical, and
               full of real-life context to make learning exciting and relevant
               for our young learners.

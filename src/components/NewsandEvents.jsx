@@ -9,7 +9,7 @@ function NewsandEvents() {
     {
       image: tiv,
       title: "Cultural day",
-      desc: "a vibrant showcase of traditions, music, dance, and fashion from diverse cultures! 🌎✨",
+      desc: "a vibrant showcase of traditions, music, dance, and fashion from diverse cultures!",
     },
     {
       image: edo,
@@ -19,7 +19,7 @@ function NewsandEvents() {
     {
       image: interhouse,
       title: "interhouse sports competition",
-      desc: "a vibrant showcase of traditions, music, dance, and fashion from diverse cultures! 🌎✨",
+      desc: "Witnessing our students cheer for their houses, push their limits, and celebrate each other’s achievements reminded us why sports is a cornerstone of our school community.",
     },
   ];
   return (

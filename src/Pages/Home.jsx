@@ -27,7 +27,7 @@ function Home() {
   const clubs = [
     { name: "chess", photo: chess },
     { name: "robotics", photo: robotics },
-    { name: "takwendo", photo: takwendo },
+    { name: "taekwondo", photo: takwendo },
     { name: "ballet", photo: ballet },
     { name: "music", photo: music },
   ];
@@ -43,8 +43,8 @@ function Home() {
           <p className="mt-4 text-lg text-gray-600 leading-relaxed">
             Welcome to APEARL School website. I hope it offers an insightful
             preview of a school which aims to provide its pupils with an
-            excellent all round experience. As we know, schools are meant to be
-            citadels of learning where high moral standard, discipline and the
+            excellent all-round experience. As we know, schools are meant to be
+            citadels of learning where high moral standards, discipline and the
             fear of God are expected to be inculcated in the pupils with a
             difference. Regarding the qualities stated above, APEARL school’s
             Managers outstandingly discharge these responsibilities without
@@ -173,7 +173,7 @@ function Home() {
 
               {/* Transparent Overlay with Title */}
               <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4">
-                <h3 className="text-white text-xl font-semibold">
+                <h3 className="text-white text-xl font-semibold capitalize">
                   {card.name}
                 </h3>
               </div>
